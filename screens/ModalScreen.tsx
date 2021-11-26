@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { Platform, StyleSheet, ImageBackground } from 'react-native';
+import { Platform, StyleSheet, Image } from 'react-native';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View, } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
@@ -39,15 +39,9 @@ import { TouchableOpacity, TextInput, SafeAreaView, Alert} from 'react-native'
   
            <SafeAreaView  style = {styles.container}>
 
-            <ImageBackground style={styles.image} resizeMode="cover" source={require("../b.jpg")} />
+            <Image style={styles.image}  source={require("../logo.png")} />
    
-       
-
-             <Text style={styles.title2}>
-          LOGO
-        </Text>
-             
-  
+            
               <TextInput style = {styles.input}
                  underlineColorAndroid = "transparent"
                  placeholder = "  Enter Email"
@@ -88,7 +82,6 @@ import { TouchableOpacity, TextInput, SafeAreaView, Alert} from 'react-native'
   const styles = StyleSheet.create({
      container: {
         flex: 1,
-      
         paddingTop: 180,
         alignItems: 'center',
      },
@@ -102,7 +95,8 @@ import { TouchableOpacity, TextInput, SafeAreaView, Alert} from 'react-native'
      backgroundColor: "#000000c0"
     },
     image:{
-      flex: 1,
+      height:60,
+      width:100,
       justifyContent: "center"
     },
 
